@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Neepawa Minor Hockey Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .form-section { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-2xl); padding: var(--space-8); }
+    .form-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; text-transform: uppercase; margin-bottom: var(--space-6); color: var(--color-text); }
+    .form-group { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-5); }
+    .form-label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); }
+    .form-label span { color: var(--color-error); }
+    .form-input, .form-select, .form-textarea {
+      padding: var(--space-3) var(--space-4);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-size: var(--text-base);
+      font-family: var(--font-body);
+      transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline:none; border-color:#f5c800; box-shadow:0 0 0 3px rgba(201,146,42,0.15); }
+    .form-textarea { resize: vertical; min-height: 140px; }
+
+    .submit-btn {
+      width: 100%;
+      padding: var(--space-4);
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background var(--transition-interactive), transform var(--transition-interactive);
+      margin-top: var(--space-4);
+    }
+    .submit-btn:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+
+    .contact-info { display: flex; flex-direction: column; gap: var(--space-5); }
+
+    .contact-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      transition: box-shadow var(--transition-interactive);
+    }
+    .contact-card:hover { box-shadow: var(--shadow-md); }
+
+    .contact-card__icon {
+      width: 46px;
+      height: 46px;
+      background: var(--color-primary-highlight);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      flex-shrink: 0;
+    }
+    .contact-card__title { font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text); margin-bottom: var(--space-1); }
+    .contact-card__detail { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+    .contact-card__detail a { color: #111; text-decoration: none; }
+    .contact-card__detail a:hover { text-decoration: underline; }
+
+    .board-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-3); }
+    .board-member { font-size: var(--text-sm); }
+    .board-member__role { font-weight: 700; color: var(--color-text); }
+    .board-member__name { color: var(--color-text-muted); }
+  </style>
+</head>
+<body class="page-body">
+<header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo__icon" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="21" fill="#111111"/><ellipse cx="21" cy="30" rx="10" ry="3.5" fill="#f5c800" opacity="0.9"/><path d="M12 18 L21 8 L30 18 L27 18 L27 27 L15 27 L15 18 Z" fill="white"/><circle cx="21" cy="14" r="3" fill="#f5c800"/></svg>
+        <div class="nav-logo__text"><span class="nav-logo__top">Neepawa</span><span class="nav-logo__bottom">Minor Hockey</span></div>
+      </a>
+            <nav aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+              Resources
+              <svg class="nav-dropdown__arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="nav-dropdown__menu" role="menu">
+              <li><a href="manager-resources.html" role="menuitem">Manager Resources</a></li>
+              <li><a href="faq.html" role="menuitem">FAQs</a></li>
+              <li class="nav-dropdown__divider"></li>
+              <li><a href="parents.html" role="menuitem">Parents Guide</a></li>
+              <li><a href="registration.html" role="menuitem">Registration Info</a></li>
+              <li><a href="contact.html" role="menuitem">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+            <div class="nav-actions">
+        <a href="registration.html" class="nav-register">Register Now</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="teams.html">Teams</a>
+      <a href="news.html">News</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="parents.html">Parents</a>
+      <a href="registration.html">Registration</a>
+      <a href="contact.html" class="active">Contact</a>
+      <div class="mobile-menu-section">Resources</div>
+      <a href="manager-resources.html">Manager Resources</a>
+      <a href="faq.html">FAQs</a>
+      <div class="mobile-menu-section">Quick Links</div>
+      <a href="parents.html">Parents Guide</a>
+      <a href="registration.html">Registration Info</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="registration.html" class="register-mobile">Register Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container page-hero__content">
+        <div class="page-hero__eyebrow">Get in Touch</div>
+        <h1 class="page-hero__title">Contact Us</h1>
+        <p class="page-hero__sub">Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Form -->
+          <div class="form-section">
+            <h2 class="form-title">Send a Message</h2>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="c-name">Your Name <span>*</span></label>
+                <input class="form-input" type="text" id="c-name" name="name" required autocomplete="name" placeholder="Lorem Ipsum">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="c-email">Email Address <span>*</span></label>
+                <input class="form-input" type="email" id="c-email" name="email" required autocomplete="email" placeholder="lorem@ipsum.ca">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="c-subject">Subject</label>
+                <select class="form-select" id="c-subject" name="subject">
+                  <option>General Inquiry</option>
+                  <option>Registration Help</option>
+                  <option>Schedule Question</option>
+                  <option>Volunteering</option>
+                  <option>Sponsorship</option>
+                  <option>Complaint / Concern</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="c-message">Message <span>*</span></label>
+                <textarea class="form-textarea" id="c-message" name="message" required placeholder="Scribite interrogationem vestram hic…"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message →</button>
+            </form>
+            <div id="contact-success" style="display:none; text-align:center; padding:var(--space-8); background:var(--color-success-highlight); border:1px solid var(--color-success); border-radius:var(--radius-xl); margin-top:var(--space-4);">
+              <p style="font-weight:700; color:var(--color-success);">Missus! Respondebitur intra 2 dies mercaturae.</p>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-card__title">Mailing Address</div>
+                <div class="contact-card__detail">Neepawa Minor Hockey Association<br>P.O. Box 000<br>Lorem, Manitoba R0A 0A0</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.4 2 2 0 0 1 3.56 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+              </div>
+              <div>
+                <div class="contact-card__title">Phone</div>
+                <div class="contact-card__detail"><a href="tel:10000000000">(000) 000-0000</a><br>Monday–Friday, 9 AM–5 PM CST</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-card__title">Email</div>
+                <div class="contact-card__detail"><a href="mailto:lorem@ipsum.ca">lorem@ipsum.ca</a><br>We respond within 2 business days.</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <div class="contact-card__title">Board Meetings</div>
+                <div class="contact-card__detail">Second Tuesday of every month<br>7:00 PM — Lorem Arena, Rm 000<br>All members welcome.</div>
+              </div>
+            </div>
+
+            <!-- Board -->
+            <div class="form-section">
+              <h3 class="form-title" style="font-size:var(--text-lg); margin-bottom:var(--space-4);">Executive Board</h3>
+              <div class="board-grid">
+                <div class="board-member"><div class="board-member__role">President</div><div class="board-member__name">Lorem Ipsum</div></div>
+                <div class="board-member"><div class="board-member__role">Vice President</div><div class="board-member__name">Dolor Amet</div></div>
+                <div class="board-member"><div class="board-member__role">Treasurer</div><div class="board-member__name">Consectetur Elit</div></div>
+                <div class="board-member"><div class="board-member__role">Secretary</div><div class="board-member__name">Adipiscing Sed</div></div>
+                <div class="board-member"><div class="board-member__role">Registrar</div><div class="board-member__name">Eiusmod Tempor</div></div>
+                <div class="board-member"><div class="board-member__role">Ice Scheduler</div><div class="board-member__name">Incididunt Ut</div></div>
+                <div class="board-member"><div class="board-member__role">Equipment Mgr</div><div class="board-member__name">Labore Dolore</div></div>
+                <div class="board-member"><div class="board-member__role">Female Hockey Dir.</div><div class="board-member__name">Magna Aliqua</div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-block: var(--space-8);">
+        <span>© 2025 Neepawa Minor Hockey Association. All rights reserved.</span>
+        <div style="display:flex; gap: var(--space-4);">
+          <a href="index.html">Home</a>
+          <a href="registration.html">Register</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
