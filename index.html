@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neepawa Minor Hockey Association — Home</title>
+  <meta name="description" content="Neepawa Minor Hockey Association — lorem ipsum dolor amet consectetur, adipiscing elit programs for all ages and skill levels.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+</head>
+<body class="page-body">
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg class="nav-logo__icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NMHA Logo">
+          <circle cx="21" cy="21" r="21" fill="#111111"/>
+          <ellipse cx="21" cy="30" rx="10" ry="3.5" fill="#f5c800" opacity="0.9"/>
+          <path d="M12 18 L21 8 L30 18 L27 18 L27 27 L15 27 L15 18 Z" fill="white"/>
+          <path d="M17 27 L17 18 L25 18 L25 27" fill="rgba(201,146,42,0.3)"/>
+          <circle cx="21" cy="14" r="3" fill="#f5c800"/>
+        </svg>
+        <div class="nav-logo__text">
+          <span class="nav-logo__top">Neepawa</span>
+          <span class="nav-logo__bottom">Minor Hockey</span>
+        </div>
+      </a>
+
+            <nav aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-haspopup="true" aria-expanded="false">
+              Resources
+              <svg class="nav-dropdown__arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="nav-dropdown__menu" role="menu">
+              <li><a href="manager-resources.html" role="menuitem">Manager Resources</a></li>
+              <li><a href="faq.html" role="menuitem">FAQs</a></li>
+              <li class="nav-dropdown__divider"></li>
+              <li><a href="parents.html" role="menuitem">Parents Guide</a></li>
+              <li><a href="registration.html" role="menuitem">Registration Info</a></li>
+              <li><a href="contact.html" role="menuitem">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+            <div class="nav-actions">
+        <a href="registration.html" class="nav-register">Register Now</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="teams.html">Teams</a>
+      <a href="news.html">News</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="parents.html">Parents</a>
+      <a href="registration.html">Registration</a>
+      <a href="contact.html">Contact</a>
+      <div class="mobile-menu-section">Resources</div>
+      <a href="manager-resources.html">Manager Resources</a>
+      <a href="faq.html">FAQs</a>
+      <div class="mobile-menu-section">Quick Links</div>
+      <a href="parents.html">Parents Guide</a>
+      <a href="registration.html">Registration Info</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="registration.html" class="register-mobile">Register Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero-photo">
+      <!-- Placeholder photo -->
+      <div class="hero-photo__img">
+        <svg viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+          <rect width="1200" height="520" fill="#cccccc"/>
+          <!-- Ice rink lines as subtle placeholder detail -->
+          <rect x="80" y="40" width="1040" height="440" rx="70" fill="none" stroke="#b0b0b0" stroke-width="5"/>
+          <line x1="600" y1="40" x2="600" y2="480" stroke="#b0b0b0" stroke-width="3"/>
+          <circle cx="600" cy="260" r="55" fill="none" stroke="#b0b0b0" stroke-width="3"/>
+          <circle cx="600" cy="260" r="7" fill="#b0b0b0"/>
+          <rect x="80" y="185" width="90" height="150" fill="none" stroke="#b0b0b0" stroke-width="3"/>
+          <rect x="1030" y="185" width="90" height="150" fill="none" stroke="#b0b0b0" stroke-width="3"/>
+          <!-- Camera/image icon in centre -->
+          <rect x="530" y="205" width="140" height="110" rx="10" fill="#aaaaaa"/>
+          <circle cx="600" cy="258" r="32" fill="#bbbbbb"/>
+          <circle cx="600" cy="258" r="20" fill="#aaaaaa"/>
+          <rect x="558" y="207" width="28" height="14" rx="4" fill="#999"/>
+          <text x="600" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#888888">Photo Placeholder</text>
+        </svg>
+      </div>
+      <!-- Banner overlay -->
+      <div class="hero-photo__banner">
+        <span class="hero-photo__banner-text">Neepawa Minor Hockey</span>
+      </div>
+    </section>
+
+    <!-- ===================== RECENT SCORES ===================== -->
+    <section class="schedule-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Game Center</span>
+          <h2 class="section-title">Recent Scores &amp; Upcoming Games</h2>
+          <p class="section-subtitle">Pellentesque habitant morbi tristique senectus et netus malesuada fames ac turpis egestas divisiones.</p>
+        </div>
+
+        <div class="division-tabs" id="home-tabs">
+          <button class="div-tab active" data-panel="u9-panel">U9</button>
+          <button class="div-tab" data-panel="u11-panel">U11</button>
+          <button class="div-tab" data-panel="u13-panel">U13</button>
+          <button class="div-tab" data-panel="u15-panel">U15</button>
+          <button class="div-tab" data-panel="u18-panel">U18</button>
+        </div>
+
+        <div id="u9-panel" class="schedule-panel active">
+          <div class="schedule-table-wrap">
+            <table class="schedule-table" aria-label="U9 schedule">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Home</th>
+                  <th>Score</th>
+                  <th>Away</th>
+                  <th>Arena</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sat Feb 8</td><td>2:30 PM</td>
+                  <td>U9-LOREM</td>
+                  <td class="score-display">4 – 7</td>
+                  <td>U9-Varius</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 9</td><td>12:00 PM</td>
+                  <td>U9-LOREM</td>
+                  <td class="score-display">4 – 7</td>
+                  <td>U9-Cursus</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 9</td><td>1:10 PM</td>
+                  <td>U9-FAUCIBUS</td>
+                  <td class="score-display">4 – 7</td>
+                  <td>U9-Cursus</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 16</td><td>2:00 PM</td>
+                  <td>U9-BLANDIT</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U9-Pretium</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+                <tr>
+                  <td>Sat Feb 22</td><td>10:00 AM</td>
+                  <td>U9-LOREM</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U9-Mollis</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="u11-panel" class="schedule-panel">
+          <div class="schedule-table-wrap">
+            <table class="schedule-table" aria-label="U11 schedule">
+              <thead>
+                <tr><th>Date</th><th>Time</th><th>Home</th><th>Score</th><th>Away</th><th>Arena</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sat Feb 1</td><td>11:00 AM</td>
+                  <td>U11-VOLUTPAT</td>
+                  <td class="score-display">5 – 2</td>
+                  <td>U11-Posuere</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 16</td><td>10:30 AM</td>
+                  <td>U11-VOLUTPAT</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U11-Lacinia</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+                <tr>
+                  <td>Sat Feb 22</td><td>1:00 PM</td>
+                  <td>U11-SEMPER</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U11-Aliquet</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="u13-panel" class="schedule-panel">
+          <div class="schedule-table-wrap">
+            <table class="schedule-table" aria-label="U13 schedule">
+              <thead>
+                <tr><th>Date</th><th>Time</th><th>Home</th><th>Score</th><th>Away</th><th>Arena</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fri Feb 7</td><td>7:00 PM</td>
+                  <td>U13-FEMALE</td>
+                  <td class="score-display">3 – 1</td>
+                  <td>Congue Urna</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--final">Final ★</span></td>
+                </tr>
+                <tr>
+                  <td>Sat Feb 8</td><td>9:00 AM</td>
+                  <td>U13-DAPIBUS</td>
+                  <td class="score-display">6 – 3</td>
+                  <td>U13-Ornare</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 16</td><td>3:30 PM</td>
+                  <td>U13-DAPIBUS</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U13-Pharetra</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="u15-panel" class="schedule-panel">
+          <div class="schedule-table-wrap">
+            <table class="schedule-table" aria-label="U15 schedule">
+              <thead>
+                <tr><th>Date</th><th>Time</th><th>Home</th><th>Score</th><th>Away</th><th>Arena</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sun Feb 9</td><td>12:00 PM</td>
+                  <td>U15-4TH ROSTER</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U15-Iaculis GK</td>
+                  <td>Felis Comm. Ctr</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 16</td><td>12:00 PM</td>
+                  <td>U15-GRAVIDA</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U15-Feugiat</td>
+                  <td>Lorem Arena</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+                <tr>
+                  <td>Sun Feb 16</td><td>4:00 PM</td>
+                  <td>U15-4TH ROSTER</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U15-Iaculis IB</td>
+                  <td>Felis Comm. Ctr</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="u18-panel" class="schedule-panel">
+          <div class="schedule-table-wrap">
+            <table class="schedule-table" aria-label="U18 schedule">
+              <thead>
+                <tr><th>Date</th><th>Time</th><th>Home</th><th>Score</th><th>Away</th><th>Arena</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sat Feb 1</td><td>6:00 PM</td>
+                  <td>U18-TEMPUS</td>
+                  <td class="score-display">4 – 2</td>
+                  <td>U18-Aliquet</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--final">Final</span></td>
+                </tr>
+                <tr>
+                  <td>Fri Feb 14</td><td>8:00 PM</td>
+                  <td>U18-TEMPUS</td>
+                  <td class="score-display">– vs –</td>
+                  <td>U18-Sodales</td>
+                  <td>Ipsum Centre</td>
+                  <td><span class="game-status game-status--upcoming">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-8);">
+          <a href="schedule.html" class="btn btn--outline">View Full Schedule →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWS ===================== -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Latest Updates</span>
+          <h2 class="section-title">Association News</h2>
+        </div>
+
+        <div class="news-grid">
+          <a href="news.html" class="news-card card card--hover">
+            <div class="news-card__img" style="background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%); display:flex; align-items:center; justify-content:center;">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(201,146,42,0.3)"/><text x="30" y="38" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="22" fill="#f5c800">🏆</text></svg>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="badge badge--accent">Championship</span>
+                <span style="font-size:var(--text-xs); color:var(--color-text-faint);">Jan 00, 2025</span>
+              </div>
+              <h3 class="news-card__title">Lorem Ipsum Nibh Congue Ornare Viverra</h3>
+              <p class="news-card__excerpt">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae pellentesque.</p>
+            </div>
+          </a>
+
+          <a href="news.html" class="news-card card card--hover">
+            <div class="news-card__img" style="background: linear-gradient(135deg, #1a1a1a 0%, #f5c800 100%); display:flex; align-items:center; justify-content:center;">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.15)"/><text x="30" y="38" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="22" fill="white">📋</text></svg>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="badge badge--navy">Registration</span>
+                <span style="font-size:var(--text-xs); color:var(--color-text-faint);">Jan 00, 2025</span>
+              </div>
+              <h3 class="news-card__title">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</h3>
+              <p class="news-card__excerpt">Nullam quis risus eget urna mollis ornare vel eu leo donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+          </a>
+
+          <a href="news.html" class="news-card card card--hover">
+            <div class="news-card__img" style="background: linear-gradient(135deg, #1a1a1a 0%, #888888 100%); display:flex; align-items:center; justify-content:center;">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.15)"/><text x="30" y="38" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="22" fill="white">🏒</text></svg>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta">
+                <span class="badge badge--ice">Development</span>
+                <span style="font-size:var(--text-xs); color:var(--color-text-faint);">Jan 00, 2025</span>
+              </div>
+              <h3 class="news-card__title">Maecenas Faucibus Mollis Interdum Aenean Lacinia</h3>
+              <p class="news-card__excerpt">NMHA is proud to announce its annual lorem ipsum camp for players U9–U18. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
+          </a>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-8);">
+          <a href="news.html" class="btn btn--outline">All News →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REGISTRATION CTA ===================== -->
+    <section class="reg-section">
+      <div class="container">
+        <div class="reg-content">
+          <div>
+            <span class="section-eyebrow" style="color:#f5c800">2025–26 Season</span>
+            <h2 class="reg-title">Ready to <em>Hit the Ice?</em></h2>
+            <p class="reg-desc">Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus tellus ac cursus commodo tortor mauris condimentum nibh.</p>
+            <div class="reg-steps">
+              <div class="reg-step"><div class="reg-step__num">1</div><span>Adipiscing elit porta lorem accumsan</span></div>
+              <div class="reg-step"><div class="reg-step__num">2</div><span>Volutpat odio facilisis mauris sit</span></div>
+              <div class="reg-step"><div class="reg-step__num">3</div><span>Dapibus posuere velit aliquet risus</span></div>
+              <div class="reg-step"><div class="reg-step__num">4</div><span>Cursus vitae congue mauris rhoncus</span></div>
+            </div>
+          </div>
+          <div class="reg-actions">
+            <div class="reg-price-box">
+              <div class="reg-price-label">Starting From</div>
+              <div class="reg-price-from">$000</div>
+              <div class="reg-price-season">Per player / season</div>
+            </div>
+            <a href="registration.html" class="btn btn--primary btn--lg" style="width:100%; justify-content:center;">Register Now →</a>
+            <a href="contact.html" class="btn btn--ghost" style="width:100%; justify-content:center;">Questions? Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPONSORS ===================== -->
+    <section class="sponsors-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Our Community Partners</span>
+          <h2 class="section-title">Thank You, Sponsors</h2>
+          <p class="section-subtitle">Tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</p>
+        </div>
+        <div class="sponsors-grid">
+          <div class="sponsor-item">Lorem Sponsor</div>
+          <div class="sponsor-item">Ipsum Co.</div>
+          <div class="sponsor-item">Dolor Group</div>
+          <div class="sponsor-item">Amet Partners</div>
+          <div class="sponsor-item">Consectetur Corp</div>
+          <div class="sponsor-item">Adipiscing Ltd.</div>
+          <div class="sponsor-item">Eiusmod Holdings</div>
+          <div class="sponsor-item">Tempor Inc.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:var(--space-3);">
+            <svg width="36" height="36" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="21" fill="#111111"/><ellipse cx="21" cy="30" rx="10" ry="3.5" fill="#f5c800" opacity="0.9"/><path d="M12 18 L21 8 L30 18 L27 18 L27 27 L15 27 L15 18 Z" fill="white"/><circle cx="21" cy="14" r="3" fill="#f5c800"/></svg>
+            <div class="nav-logo__text"><span class="nav-logo__top" style="color:#f5c800">Neepawa</span><span class="nav-logo__bottom">Minor Hockey</span></div>
+          </a>
+          <p class="footer-brand__tagline">Developing young athletes with a passion for the game since 0000. Serving Neepawa and surrounding Manitoba communities.</p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">Association</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News &amp; Updates</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">Programs</h3>
+          <ul role="list">
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="teams.html#u7">U7 Program</a></li>
+            <li><a href="teams.html#u9">U9 Program</a></li>
+            <li><a href="teams.html#u11">U11 Program</a></li>
+            <li><a href="teams.html#u13">U13 Program</a></li>
+            <li><a href="teams.html#u15">U15 Program</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">Contact</h3>
+          <ul role="list">
+            <li><a href="mailto:lorem@ipsum.ca">lorem@ipsum.ca</a></li>
+            <li><a href="tel:10000000000">(000) 000-0000</a></li>
+            <li><a href="#">Lorem Arena, Lorem MB</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Neepawa Minor Hockey Association. All rights reserved.</span>
+        <div style="display:flex; gap: var(--space-4);">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="contact.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
